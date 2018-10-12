@@ -20,16 +20,11 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
         val items = obtenerLista()
         recyclerview_item.layoutManager=LinearLayoutManager(this)
-        recyclerview_item.hasFixedSize()
         recyclerview_item.adapter = ItemAdapter(items)
         //recyclerview_item.layoutManager=GridLayoutManager(this,2)
 
-        val fab: View = findViewById(R.id.fab)
         fab.setOnClickListener { view ->
             Snackbar.make(view, "Se inserto nuevo contacto", Snackbar.LENGTH_LONG)
                     .setAction("Action", null)

@@ -1,7 +1,5 @@
 package com.example.hp.recyclerview.adapter
 
-import android.content.ClipData
-import android.support.v7.view.menu.ActionMenuItemView
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
@@ -9,14 +7,7 @@ import android.view.ViewGroup
 import com.example.hp.recyclerview.R
 import com.example.hp.recyclerview.model.Persona
 import kotlinx.android.synthetic.main.item_list.view.*
-import android.content.Intent
-import android.net.Uri
-import android.support.v4.content.ContextCompat.startActivity
 import android.widget.Toast
-import android.support.v4.content.ContextCompat.startActivity
-
-
-
 
 //paso 1
 class ItemAdapter (val personasList:ArrayList<Persona>):RecyclerView.Adapter<ItemAdapter.ViewHolder>(){
@@ -38,6 +29,7 @@ class ItemAdapter (val personasList:ArrayList<Persona>):RecyclerView.Adapter<Ite
 
     //paso 2
     class ViewHolder (itemView:View):RecyclerView.ViewHolder(itemView){
+
         fun bindItems(item: Persona){
             itemView.txt_nombre.text = item.nombre
             itemView.txt_celular.text = item.celular
